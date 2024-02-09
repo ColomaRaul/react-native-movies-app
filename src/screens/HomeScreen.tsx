@@ -23,7 +23,6 @@ export const HomeScreen = () => {
             <View style={{marginTop: top + 20}}>
                 <View style={{height: 500}}>
                     <Text style={{fontSize: 30, fontWeight: 'bold', marginLeft: 10}}>En cartelera</Text>
-                    {/* Carrousel mismo que el flat pero con más tamaño (no funcioan bien el carrusel) */}
                     <FlatList
                         data={nowPlaying}
                         renderItem={({item}) => (
@@ -33,14 +32,10 @@ export const HomeScreen = () => {
                         horizontal={true}
                         showsHorizontalScrollIndicator={false}
                     />
-
                 </View>
-
-                {/* Meter las pellículas flat */}
                 <HorizontalSlider title="Popular" movies={popular} />
                 <HorizontalSlider title="Top Rated" movies={topRated} />
                 <HorizontalSlider title="Upcoming" movies={upcoming} />
-
             </View>
         </ScrollView>
     )
